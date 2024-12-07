@@ -22,24 +22,24 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'TheBlackBot')
-API_ID = int(environ.get('API_ID', '29450452'))
-API_HASH = environ.get('API_HASH', '54759945ff88b52777eec9a455944d31')
+API_ID = int(environ.get('API_ID', '21188057'))
+API_HASH = environ.get('API_HASH', '8564fab8db759bb04b1907bd12ed98ef')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002101130967'))
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1759982322').split()]
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002289024376'))
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6976744562 6085825994 8102446291').split()]
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
-PICS = (environ.get('PICS', 'https://graph.org/file/517bc12dd5c1347df10f6.jpg')).split() #SAMPLE PIC
-NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/b69af2db776e4e85d21ec.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://t.me/TheBlackXYZ/155")
-SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/15c1ad448dfe472a5cbb8.jpg")
+PICS = (environ.get('PICS', 'https://envs.sh/RCj.jpg')).split() #SAMPLE PIC
+NOR_IMG = environ.get("NOR_IMG", "https://envs.sh/RCj.jpg")
+MELCOW_VID = environ.get("MELCOW_VID", "https://envs.sh/RCj.jpg")
+SPELL_IMG = environ.get("SPELL_IMG", "https://envs.sh/RCj.jpg")
 
 # Channels & Users,Auth Channel - Force Suscribe 
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '1002267822942').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1001889509068') # give your force subscribe channel id here else leave it blank
+auth_channel = environ.get('AUTH_CHANNEL', '') # give your force subscribe channel id here else leave it blank
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 reqst_channel = environ.get('REQST_CHANNEL_ID', '')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
@@ -50,9 +50,9 @@ FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-100
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 
 # MongoDB information database 
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://TheBlackXYZBotMovies:TheBlackXYZBotMovies@cluster0.nu4uqj6.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'blackcollection')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://rohanahamed75:gt4RXJZ1mUtOh4Xv@mmtg.0ong5.mongodb.net/?retryWrites=true&w=majority&appName=mmtg")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Rahat")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Rahat')
 
 #Rename Mode - True or False 🤔
 RENAME_MODE = bool(environ.get('RENAME_MODE', True)) # Set True or False
@@ -61,11 +61,11 @@ RENAME_MODE = bool(environ.get('RENAME_MODE', True)) # Set True or False
 RemoveBG_API = environ.get("RemoveBG_API", "f7stCpqeKmuDeHMX66qH5V8D")
 
 # Channel Links 💸
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/TheBlackXYZ_Movie_Group')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/TheBlackXYZ')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/TheBlackXYZ/155')
-VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/TheBlackXYZ/155')
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'The_Black_XYZ_SupportChat') # Support Chat Links Without https:// or @
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/RM_Movie_Request')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Movies_Adda_725')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Movies_Adda_725')
+VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/Movies_Adda_725')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'RM_Support_Groups') # Support Chat Links Without https:// or @
 
 # Shortlink Info
 SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', True))
@@ -83,12 +83,12 @@ REQUEST_TO_JOIN_MODE = bool(environ.get('REQUEST_TO_JOIN_MODE', True)) # Set Tru
 TRY_AGAIN_BTN = bool(environ.get('TRY_AGAIN_BTN', True)) # Set True Or False (This try again button is only for request to join fsub not for normal fsub
 
 # Clone Information : If Clone Mode Is True Then Bot Clone Other Bots.
-CLONE_MODE = bool(environ.get('CLONE_MODE', True)) # Set True or False
+CLONE_MODE = bool(environ.get('CLONE_MODE', False)) # Set True or False
 PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', '@TheBlackXYZBotz') # Public Channel Username Without @ and Bot Is Admin In Your Channel.
 CLONE_DATABASE_URI = environ.get('CLONE_DATABASE_URI', "mongodb+srv://TheBlackXYZ06:TheBlackXYZ06@cluster0.ir3gpvr.mongodb.net/?retryWrites=true&w=majority") # Necessary If clone mode is true
 
 # If PREMIUM_AND_REFERAL_MODE is True Then Fill Below Variable, If Flase Then No Need To Fill.
-PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', True)) # Set Ture Or False
+PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', False)) # Set Ture Or False
 REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '20')) # number of referal count
 REFERAL_PREMEIUM_TIME = environ.get('REFERAL_PREMEIUM_TIME', '1month')
 PAYMENT_QR = environ.get('PAYMENT_QR', 'https://graph.org/file/26efce74874b14ebdb4ff.jpg')
@@ -104,16 +104,16 @@ if 'DYNO' in environ:
     ON_HEROKU = True
 else:
     ON_HEROKU = False
-URL = environ.get("URL", "https://enormous-carol-theblackxyz9021-2822c420.koyeb.app/") # Fill env at deoplyment time Stream Mode Is True else avoide 
+URL = environ.get("URL", "") # Fill env at deoplyment time Stream Mode Is True else avoide 
 
 # True Or False
-AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', False))
+AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', True))
 PM_SEARCH = bool(environ.get('PM_SEARCH', True))
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
-IMDB = is_enabled((environ.get('IMDB', "True")), True)
+IMDB = is_enabled((environ.get('IMDB', "True")), False)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
@@ -132,7 +132,7 @@ VERIFY_SHORTLINK_URL = environ.get('VERIFY_SHORTLINK_URL', 'api.yamlinks.com')
 VERIFY_SHORTLINK_API = environ.get('VERIFY_SHORTLINK_API', '8ba797ded52d10834ad44fc07bf9c659a67167d4')
 # if verify second shortner is True then fill below url and api
 VERIFY_SND_SHORTLINK_URL = environ.get('VERIFY_SND_SHORTLINK_URL', 'api.yamlinks.com')
-VERIFY_SND_SHORTLINK_API = environ.get('VERIFY_SND_SHORTLINK_API', '8ba797ded52d10834ad44fc07bf9c659a67167d4')
+VERIFY_SND_SHORTLINK_API = environ.get('VERIFY_T_SHORTLINK_API', '8ba797ded52d10834ad44fc07bf9c659a67167d4')
 VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/TheBlackXYZ/155')
 
 
@@ -144,7 +144,7 @@ CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", f"{script.IMDB_TEMPLATE_TXT}")
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", '10')
-LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
+LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "bangla", "ben", "telugu", "tel", "kannada", "kan"]
 SEASONS = ["season 1", "season 2", "season 3", "season 4", "season 5", "season 6", "season 7", "season 8", "season 9", "season 10"]
 EPISODES = ["E01", "E02", "E03", "E04", "E05", "E06", "E07", "E08", "E09", "E10", "E11", "E12", "E13", "E14", "E15", "E16", "E17", "E18", "E19", "E20", "E21", "E22", "E23", "E24", "E25", "E26", "E27", "E28", "E29", "E30", "E31", "E32", "E33", "E34", "E35", "E36", "E37", "E38", "E39", "E40"]
 QUALITIES = ["360p", "480p", "720p", "1080p", "1440p", "2160p"]
